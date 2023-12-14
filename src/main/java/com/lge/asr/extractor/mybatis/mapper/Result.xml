@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Result">
+
+    <select id="selectLoggingData" parameterType="Map"
+        resultType="UserDataVo">
+        SELECT *
+        FROM
+        tb_user_info
+        WHERE userId = #{userId} and password = #{password}
+    </select>
+
+    <select id="selectIpAddress" resultType="String">
+        SELECT
+        host
+        FROM
+        information_schema.processlist
+        WHERE ID=connection_id();
+    </select>
+
+    <insert id="insertUser" parameterType="UserDataVo">
+        INSERT
+        INTO
+        tb_logging_info(id,name,email,date,region,command,ip)
+        VALUES (#{userId},#{userName},#{email},DATE_FORMAT(NOW(), '%Y-%m-%d
+        %H:%m:%s'),#{region},#{command},#{ip})
+    </insert>
+
+    <select id="selectByConditionNew" parameterType="Map" resultType="ResultVo">
+        SELECT * FROM tb_logging_data_empty
+        WHERE 1=1
+        ${condition}
+
+        UNION
+        SELECT * FROM tb_logging_data_HA
+        WHERE 1=1
+        ${condition}
+
+        UNION
+        SELECT * FROM tb_logging_data_MC
+        WHERE 1=1
+        ${condition}
+
+        UNION
+        SELECT * FROM tb_logging_data_Platform
+        WHERE 1=1
+        ${condition}
+
+        UNION
+        SELECT * FROM tb_logging_data_webos
+        WHERE 1=1
+        ${condition}
+
+        UNION
+        SELECT * FROM tb_logging_data_robot00
+        WHERE 1=1
+        ${condition}
+
+        UNION
+        SELECT * FROM tb_logging_data_robot01
+        WHERE 1=1
+        ${condition}
+
+        UNION
+        SELECT * FROM tb_logging_data_robot02
+        WHERE 1=1
+        ${condition}
+
+        UNION
+        SELECT * FROM tb_logging_data_robot03
+        WHERE 1=1
+        ${condition}
+    </select>
+
+    <select id="selectByCondition" parameterType="Map"
+        resultType="ResultVo">
+        SELECT * FROM tb_logging_data
+        WHERE 1=1
+        ${condition}
+    </select>
+
+    <select id="selectResult" parameterType="Map"
+        resultType="ResultTextVo">
+        SELECT engineType, resultText, feedback
+        FROM tb_result_data
+        WHERE 1=1
+        AND logId = #{logId}
+    </select>
+
+    <select id="selectAwsInfo" resultType="Aws">
+        SELECT
+        accessKey,
+        secretKey,
+        inputPath
+        FROM
+        tb_aws_info
+    </select>
+
+    <select id="selectUserDataByCondition" parameterType="Map"
+        resultType="UserDataVo">
+        SELECT
+        gmTime,
+        contactData,
+        additionalData
+        FROM
+        tb_user_data
+        WHERE 1=1
+        ${condition}
+    </select>
+
+    <select id="selectUserData" parameterType="Map"
+        resultType="UserDataVo">
+        SELECT *
+        FROM
+        tb_user_data
+        WHERE logId = #{logId}
+    </select>
+
+    <select id="selectTaggingData" parameterType="Map"
+        resultType="TaggingDataVo">
+        SELECT *
+        FROM
+        tb_tagging_info
+        WHERE logId = #{logId}
+    </select>
+
+    <select id="selectByConditionTemp" parameterType="Map"
+        resultType="ResultVo">
+        SELECT *
+        FROM tb_logging_data_temp
+        WHERE 1=1
+        ${condition}
+    </select>
+
+    <select id="selectResultTemp" parameterType="Map"
+        resultType="ResultTextVo">
+        SELECT engineType, resultText, feedback
+        FROM tb_result_data_temp
+        WHERE 1=1
+        AND logId = #{logId}
+    </select>
+</mapper>

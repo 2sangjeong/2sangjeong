@@ -1,0 +1,27 @@
+[2023-11-08 15:20:49] [ INFO] (com.lge.asr.common.utils.CommonUtils:232) - aws s3 ls s3://an2-speech-dev/logs/ | grep 20231107
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:238) - shellCommand :: aws s3 ls s3://an2-speech-dev/logs/ | grep 20231107
+[2023-11-08 15:20:49] [ INFO] (com.lge.asr.common.utils.CommonUtils:232) - aws s3 ls s3://an2-speech-prd/logs/ | grep 20231107
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:238) - shellCommand :: aws s3 ls s3://an2-speech-prd/logs/ | grep 20231107
+[2023-11-08 15:20:49] [ INFO] (com.lge.asr.common.utils.CommonUtils:232) - aws s3 ls s3://uw2-speech-prd/logs/ | grep 20231107
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:238) - shellCommand :: aws s3 ls s3://uw2-speech-prd/logs/ | grep 20231107
+[2023-11-08 15:20:49] [ERROR] (com.lge.asr.common.utils.CommonUtils:273) - Unexpected quit.
+[2023-11-08 15:20:49] [ERROR] (com.lge.asr.common.utils.CommonUtils:273) - Unexpected quit.
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:301) - CommandResult :: aws s3 ls s3://an2-speech-dev/logs/ | grep 20231107
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:301) - CommandResult :: aws s3 ls s3://an2-speech-prd/logs/ | grep 20231107
+[2023-11-08 15:20:49] [ INFO] (com.lge.asr.common.utils.CommonUtils:232) - ls /data001/ContinualLearning/AwsLogData/seoul_dev/logs/ | grep 20231107
+[2023-11-08 15:20:49] [ INFO] (com.lge.asr.common.utils.CommonUtils:232) - ls /data001/ContinualLearning/AwsLogData/seoul_prd/logs/ | grep 20231107
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:238) - shellCommand :: ls /data001/ContinualLearning/AwsLogData/seoul_prd/logs/ | grep 20231107
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:238) - shellCommand :: ls /data001/ContinualLearning/AwsLogData/seoul_dev/logs/ | grep 20231107
+[2023-11-08 15:20:49] [ERROR] (com.lge.asr.common.utils.CommonUtils:273) - Unexpected quit.
+[2023-11-08 15:20:49] [ERROR] (com.lge.asr.common.utils.CommonUtils:273) - Unexpected quit.
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:301) - CommandResult :: ls /data001/ContinualLearning/AwsLogData/seoul_dev/logs/ | grep 20231107
+[2023-11-08 15:20:49] [ INFO] (com.lge.asr.downloader.utils.DownloaderUtils:63) - hasTargetDateOnLocal(), [seoul_dev][20231107] result : 
+[2023-11-08 15:20:49] [DEBUG] (com.lge.asr.common.utils.CommonUtils:301) - CommandResult :: ls /data001/ContinualLearning/AwsLogData/seoul_prd/logs/ | grep 20231107
+[2023-11-08 15:20:49] [ INFO] (com.lge.asr.downloader.utils.DownloaderUtils:63) - hasTargetDateOnLocal(), [seoul_prd][20231107] result : 
+[2023-11-08 15:20:51] [ERROR] (com.lge.asr.common.utils.CommonUtils:273) - Unexpected quit.
+[2023-11-08 15:20:51] [DEBUG] (com.lge.asr.common.utils.CommonUtils:301) - CommandResult :: aws s3 ls s3://uw2-speech-prd/logs/ | grep 20231107
+[2023-11-08 15:20:51] [ INFO] (com.lge.asr.common.utils.CommonUtils:232) - ls /data001/ContinualLearning/AwsLogData/oregon_prd/logs/ | grep 20231107
+[2023-11-08 15:20:51] [DEBUG] (com.lge.asr.common.utils.CommonUtils:238) - shellCommand :: ls /data001/ContinualLearning/AwsLogData/oregon_prd/logs/ | grep 20231107
+[2023-11-08 15:20:51] [ERROR] (com.lge.asr.common.utils.CommonUtils:273) - Unexpected quit.
+[2023-11-08 15:20:51] [DEBUG] (com.lge.asr.common.utils.CommonUtils:301) - CommandResult :: ls /data001/ContinualLearning/AwsLogData/oregon_prd/logs/ | grep 20231107
+[2023-11-08 15:20:51] [ INFO] (com.lge.asr.downloader.utils.DownloaderUtils:63) - hasTargetDateOnLocal(), [oregon_prd][20231107] result : 
